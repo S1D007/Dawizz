@@ -1,3 +1,27 @@
+# For Developers
+## Commit Message Conventions
+
+We follow specific commit message conventions to maintain a clean and organized commit history. Please follow the guidelines below when crafting your commit messages:
+
+- Use the [Conventional Commits](https://www.conventionalcommits.org/) format.
+- Examples of acceptable commit messages:
+  - feat: Add new feature X
+  - fix: Resolve issue with Y
+  - chore: Update dependencies
+  - docs: Add documentation for Z
+  - refactor: Refactor code
+  - test: Add tests
+- Commit messages should be clear, concise, and describe the changes made.
+
+To ensure your commits meet these standards, we use Commitlint. Make sure your commit messages pass the Commitlint rules before creating a pull request.
+
+We use Commitlint to enforce commit message conventions. Before making a pull request, ensure your commit messages adhere to the following rules:
+
+- Install Commitlint: `npm install @commitlint/{config-conventional,cli} --save-dev`
+- Run Commitlint before creating a PR: `npx commitlint --from=HEAD~1`
+
+Commit messages should follow the Conventional Commits format for better readability and maintainability of our commit history.
+
 # Dawizz - Data Visualization and Analysis Platform
 
 # Data Input and Integration

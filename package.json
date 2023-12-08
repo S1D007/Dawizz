@@ -1,16 +1,23 @@
 {
-  "name": "Voluble-MonoRepo",
+  "name": "Dawizz-MonoRepo",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "start:dev": "concurrently \"npm:backend\" \"npm:frontend\"",
-    "backend": "cd packages/Voluble-Backend && npm run start:dev",
-    "frontend": "cd packages/Voluble-Frontend && npm run start",
-    "build:prod": "echo 'Building the monorepo'"
+    "prepare": "husky install"
+
   },
   "devDependencies": {
-    "concurrently": "^8.2.1"
-  }
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "concurrently": "^8.2.1",
+    "husky": "^8.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint && npm test"
+    }
+  }  
 }
