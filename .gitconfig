@@ -1,0 +1,11 @@
+# .gitconfig
+
+[user]
+    # name = Siddhant
+    # email = s1d.official011001011@gmail.com
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch

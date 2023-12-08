@@ -1,0 +1,7 @@
+# .gitattributes
+
+# Handle line endings
+* text=auto
+
+# Specify custom merge strategies
+*.md merge=ours

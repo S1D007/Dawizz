@@ -1,0 +1,16 @@
+{
+  "name": "Voluble-MonoRepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:dev": "concurrently \"npm:backend\" \"npm:frontend\"",
+    "backend": "cd packages/Voluble-Backend && npm run start:dev",
+    "frontend": "cd packages/Voluble-Frontend && npm run start",
+    "build:prod": "echo 'Building the monorepo'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

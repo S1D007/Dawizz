@@ -1,0 +1,49 @@
+# Ignore Node modules for all packages
+/packages/*/node_modules
+
+# Ignore NestJS dist directory
+/packages/backend/nestjs-app/dist
+
+# Ignore React Native build artifacts
+/packages/frontend/react-native-app/android
+/packages/frontend/react-native-app/ios
+/packages/frontend/react-native-app/node_modules
+/packages/frontend/react-native-app/npm-debug.log
+
+# Ignore any build artifacts
+/packages/*/build
+/packages/*/coverage
+/packages/*/dist
+/packages/*/tmp
+/packages/*/temp
+
+# Ignore Yarn or npm lock files
+/packages/*/yarn.lock
+/packages/*/package-lock.json
+
+# Ignore environment-specific files
+/packages/*/env
+/packages/*/env.local
+/packages/*/env.development
+/packages/*/env.production
+
+# Ignore logs and temporary files
+/packages/*/logs
+/packages/*/log
+/packages/*/logs/*
+/packages/*/log/*
+/packages/*/tmp/*
+/packages/*/temp/*
+
+# Ignore editor-specific files and directories
+.idea
+.vscode
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore project-specific configuration files
+/nest-cli.json
+/react-native.config.js
+node_modules
