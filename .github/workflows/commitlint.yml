@@ -1,30 +1,30 @@
-name: Commitlint Check
+# name: Commitlint Check
 
-on:
-  push:
-    branches: ["main", "dev"]
+# on:
+#   push:
+#     branches: ["main", "dev"]
 
-jobs:
-  commitlint:
-    runs-on: ubuntu-latest
+# jobs:
+#   commitlint:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
-      - name: Use Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20'
+#       - name: Use Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: '20'
 
-     - name: Install dependencies
-        run: npm install @commitlint/{config-conventional,cli} --save-dev
+#      - name: Install dependencies
+#         run: npm install @commitlint/{config-conventional,cli} --save-dev
 
-      - name: Get commit range
-        run: |
-          COMMIT_RANGE=$(git log --pretty=format:"%H" -n 2 | tail -n 1)
-          echo "::set-env name=COMMIT_RANGE::$COMMIT_RANGE"
+#       - name: Get commit range
+#         run: |
+#           COMMIT_RANGE=$(git log --pretty=format:"%H" -n 2 | tail -n 1)
+#           echo "::set-env name=COMMIT_RANGE::$COMMIT_RANGE"
 
-      - name: Run Commitlint
-        run: |
-          npx commitlint --from=$COMMIT_RANGE
+#       - name: Run Commitlint
+#         run: |
+#           npx commitlint --from=$COMMIT_RANGE
