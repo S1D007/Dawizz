@@ -17,8 +17,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
+     - name: Install dependencies
         run: npm install @commitlint/{config-conventional,cli} --save-dev
 
+      - name: Get commit range
+        run: |
+          COMMIT_RANGE=$(git log --pretty=format:"%H" -n 2 | tail -n 1)
+          echo "::set-env name=COMMIT_RANGE::$COMMIT_RANGE"
+
       - name: Run Commitlint
-        run: npx commitlint --from=HEAD~1
+        run: |
+          npx commitlint --from=$COMMIT_RANGE
