@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import React from 'react'
-
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -156,7 +155,7 @@ function Form4({step,setstep}) {
       </CardHeader>
       <CardFooter className="flex justify-between">
         <Button variant="outline" onClick={()=>{setstep(step-1)}}>back</Button>
-        <Button onClick={()=>{alert("sbr rkh bhai")}}>Proceed</Button>
+        <Button onClick={()=>{alert("Bhai Jitna hai hackathon!!")}}>Proceed</Button>
       </CardFooter>
     </Card>
   )
@@ -170,15 +169,21 @@ const stepform = () => {
 
   const [step, setstep] = useState(1)
   return (
-    <div className="main h-screen bg-slate-500 w-full flex items-center flex-col justify-center bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center">
+    <div className="main h-screen bg-slate-500 w-full flex items-center flex-col justify-center">
 
-    <div className='first h-[40px] w-[80%] mb-4 flex items-center justify-center '>
+<img className="w-full h-full object-cover absolute top-0 left-0 z-5 " src="https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif" >
+          {/* <source
+            src="https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif"
+            type=""
+          /> */}
+        </img>
+    <div className='first h-[40px] w-[80%] mb-4 flex items-center justify-center z-10'>
     <Badge className={`m-2 p-2 mx-4 px-6 font-extrabold border-4  bg-transparent ${step==1? 'border-stone-100 bg-black ':''}`} onClick={()=>{setstep(1)}}>1</Badge>
     <Badge className={`m-2 p-2 mx-4 px-6  font-extrabold  border-4  bg-transparent ${step==2? 'border-stone-100 bg-black':''}`} onClick={()=>{setstep(2)}} >2</Badge>
     <Badge className={`m-2 p-2 mx-4 px-6  font-extrabold  border-4 bg-transparent ${step==3? 'border-stone-100 bg-black':''}`} onClick={()=>{setstep(3)}}>3</Badge>
     <Badge className={`m-2 p-2 mx-4 px-6  font-extrabold border-4  bg-transparent ${step==4? 'border-stone-100 bg-black':''}`} onClick={()=>{setstep(4)}}>4</Badge>
     </div>
-    <div className="second h-[50vh] w-[80%] flex items-center justify-center ">
+    <div className="second h-[50vh] w-[80%] flex items-center justify-center z-10">
      {step===1 && <Form1 step={step} setstep={setstep}/>} 
      {step===2 && <Form2 step={step} setstep={setstep}/>}
      {step===3 && <Form3 step={step} setstep={setstep}/>}
