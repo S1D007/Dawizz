@@ -173,10 +173,10 @@ const stepform = () => {
     <div className="main h-screen bg-slate-500 w-full flex items-center flex-col justify-center bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center">
 
     <div className='first h-[40px] w-[80%] mb-4 flex items-center justify-center '>
-    <Badge className={`m-2 p-2 mx-4 px-6 font-extrabold border-4  bg-transparent ${step==1? 'border-stone-100 bg-black ':''}`}>1</Badge>
-    <Badge className={`m-2 p-2 mx-4 px-6  font-extrabold  border-4  bg-transparent ${step==2? 'border-stone-100 bg-black':''}`}>2</Badge>
-    <Badge className={`m-2 p-2 mx-4 px-6  font-extrabold  border-4 bg-transparent ${step==3? 'border-stone-100 bg-black':''}`}>3</Badge>
-    <Badge className={`m-2 p-2 mx-4 px-6  font-extrabold border-4  bg-transparent ${step==4? 'border-stone-100 bg-black':''}`}>4</Badge>
+    <Badge className={`m-2 p-2 mx-4 px-6 font-extrabold border-4  bg-transparent ${step==1? 'border-stone-100 bg-black ':''}`} onClick={()=>{setstep(1)}}>1</Badge>
+    <Badge className={`m-2 p-2 mx-4 px-6  font-extrabold  border-4  bg-transparent ${step==2? 'border-stone-100 bg-black':''}`} onClick={()=>{setstep(2)}} >2</Badge>
+    <Badge className={`m-2 p-2 mx-4 px-6  font-extrabold  border-4 bg-transparent ${step==3? 'border-stone-100 bg-black':''}`} onClick={()=>{setstep(3)}}>3</Badge>
+    <Badge className={`m-2 p-2 mx-4 px-6  font-extrabold border-4  bg-transparent ${step==4? 'border-stone-100 bg-black':''}`} onClick={()=>{setstep(4)}}>4</Badge>
     </div>
     <div className="second h-[50vh] w-[80%] flex items-center justify-center ">
      {step===1 && <Form1 step={step} setstep={setstep}/>} 
